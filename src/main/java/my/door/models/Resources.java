@@ -1,6 +1,6 @@
 package my.door.models;
 
-import jakarta.validation.constraints.Min;
+import javax.validation.constraints.Min;
 
 public class Resources {
 

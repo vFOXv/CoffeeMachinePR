@@ -5,12 +5,14 @@ import my.door.models.Resources;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @Component
 public class CoffeeDAO {
     private static int COFFEE_COUNT;
     private ArrayList<KindCoffee> listCoffee;
     private Resources resources;
+    private HashMap<String, Integer> statistics;
 
     public CoffeeDAO() {
         this.listCoffee = new ArrayList<>();
@@ -19,33 +21,17 @@ public class CoffeeDAO {
         listCoffee.add(new KindCoffee(++COFFEE_COUNT, "Americano", 8, 90, 0));
         listCoffee.add(new KindCoffee(++COFFEE_COUNT, "Latte", 15, 100, 100));
 
-        resources = new Resources(10,200,200);
+        resources = new Resources(10, 200, 200);
+
+        statistics = new HashMap();
+        statistics.put("Espresso",0);
+        statistics.put("Cappuccino",0);
+        statistics.put("Americano",0);
+        statistics.put("Latte",0);
+        statistics.put("coffee",0);
+        statistics.put("water",0);
+        statistics.put("milk",0);
     }
-
-//    public int getCoffee() {
-//        return resources.getCoffee();
-//    }
-//
-//    public void setCoffee(int coffee) {
-//        resources.setCoffee(coffee);
-//    }
-//
-//    public int getWater() {
-//        return resources.getWater();
-//    }
-//
-//    public void setWater(int water) {
-//        resources.setWater(water);
-//    }
-//
-//    public int getMilk() {
-//        return resources.getMilk();
-//    }
-//
-//    public void setMilk(int milk) {
-//        resources.setMilk(milk);
-//    }
-
 
     public Resources getResources() {
         return resources;
@@ -55,15 +41,18 @@ public class CoffeeDAO {
         this.resources = resources;
     }
 
+    //получение списка видов кофе
     public ArrayList<KindCoffee> listMyCoffee() {
         return listCoffee;
     }
 
+    //массив со значениями остатков ресурсов кофемашины
     public int[] listMyConsumables() {
-        int[]refill = {resources.getCoffee(), resources.getWater(), resources.getMilk()};
+        int[] refill = {resources.getCoffee(), resources.getWater(), resources.getMilk()};
         return refill;
     }
 
+    //поиск вида кофе по id
     public KindCoffee searchById(int id) {
         for (int i = 0; i <= listCoffee.size(); i++) {
             if (id == listCoffee.get(i).getId()) {
@@ -73,5 +62,10 @@ public class CoffeeDAO {
             }
         }
         return null;
+    }
+
+    //получение Map со статистикой
+    public HashMap getStatistics() {
+        return statistics;
     }
 }

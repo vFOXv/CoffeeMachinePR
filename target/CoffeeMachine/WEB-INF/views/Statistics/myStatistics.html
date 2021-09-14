@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><strong>Name</strong></td>
+        <td><strong>Amount</strong></td>
+        <td><strong>Action</strong></td>
+    </tr>
+    <tr>
+        <td>Espresso</td>
+        <td><p th:text="${Espresso}"></p></td>
+        <td>Make</td>
+        <td>
+            <a th:href="@{/refill/{id}(id=${RecipeEspresso.getId()})}">Know recipe</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Cappuccino</td>
+        <td><p th:text="${Cappuccino}"></p></td>
+        <td>Make</td>
+        <td>
+            <a th:href="@{/refill/{id}(id=${RecipeCappuccino.getId()})}">Know recipe</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Americano</td>
+        <td><p th:text="${Americano}"></p></td>
+        <td>Make</td>
+        <td>
+            <a th:href="@{/refill/{id}(id=${RecipeAmericano.getId()})}">Know recipe</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Latte</td>
+        <td><p th:text="${Latte}"></p></td>
+        <td>Make</td>
+        <td>
+            <a th:href="@{/refill/{id}(id=${RecipeLatte.getId()})}">Know recipe</a>
+        </td>
+    </tr>
+    <tr>
+        <td>Coffee</td>
+        <td><p th:text="${Coffee}"></p> </td>
+        <td>Spend</td>
+    </tr>
+    <tr>
+        <td>Water</td>
+        <td><p th:text="${Water}"></p> </td>
+        <td>Spend</td>
+    </tr>
+    <tr>
+        <td>Milk</td>
+        <td><p th:text="${Milk}"></p> </td>
+        <td>Spend</td>
+    </tr>
+    <tr>
+        <td>Coffee</td>
+        <td><p th:text="${CoffeeNowInMachine}"></p> </td>
+        <td>Coffee are in Machine</td>
+    </tr>
+    <tr>
+        <td>Water</td>
+        <td><p th:text="${WaterNowInMachine}"></p> </td>
+        <td>Water are in Machine</td>
+    </tr>
+    <tr>
+        <td>Milk</td>
+        <td><p th:text="${MilkNowInMachine}"></p> </td>
+        <td>Milk are in Machine</td>
+    </tr>
+</table>
+<br>
+<a href="/">Choice action</a>
+<br>
+<a href="/refill">Add resources CoffeeMachine</a>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe</title>
+</head>
+<body>
+<p th:text="${message}"></p>
+<table>
+    <tr>
+        <td>Kind Resources</td>
+        <td>Amount Resources</td>
+    </tr>
+    <tr>
+        <td>Coffee</td>
+        <td th:text="${recipeCoffee}"></td>
+    </tr>
+    <tr>
+        <td>Water</td>
+        <td th:text="${recipeWater}"></td>
+    </tr>
+    <tr>
+        <td>Milk</td>
+        <td th:text="${recipeMilk}"></td>
+    </tr>
+</table>
+<br>
+<a href="/">Choice action.</a>
+</body>
+</html>

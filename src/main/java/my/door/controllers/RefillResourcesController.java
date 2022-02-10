@@ -66,7 +66,7 @@ public class RefillResourcesController {
         } else if (boxAdd >= 0 && boxAdd > 100 - boxBeen) {
             //заполняем весь объем танка
             coffeeDAO.getResources().setCoffee(100);
-            model.addAttribute("lostCoffee", "You lost " + (boxAdd - (100 - boxBeen) + " coffee!"));
+            model.addAttribute("lostCoffee", "You lost " + (boxAdd - (100 - boxBeen) + " coffee! Because box = 100!"));
             return "Start/choiceAction";
         }
 //        else if (myResources.getAddCoffee() < 0) {
@@ -83,7 +83,7 @@ public class RefillResourcesController {
         } else if (boxAdd >= 0 && boxAdd > 500 - boxBeen) {
             //заполняем весь объем танка
             coffeeDAO.getResources().setWater(500);
-            model.addAttribute("lostWater", "You lost " + (boxAdd - (500 - boxBeen) + " water!"));
+            model.addAttribute("lostWater", "You lost " + (boxAdd - (500 - boxBeen) + " water! Because box = 500!"));
             return "Start/choiceAction";
         }
 //        else if (myResources.getAddWater() < 0) {
@@ -100,7 +100,7 @@ public class RefillResourcesController {
         } else if (boxAdd >= 0 && boxAdd > 500 - boxBeen) {
             //заполняем весь объем танка
             coffeeDAO.getResources().setMilk(500);
-            model.addAttribute("lostWater", "You lost " + (boxAdd - (500 - boxBeen) + " milk!"));
+            model.addAttribute("lostMilk", "You lost " + (boxAdd - (500 - boxBeen) + " milk! Because box = 500!"));
             return "Start/choiceAction";
         }
         return "redirect:/";

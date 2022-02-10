@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MakeCoffee/refill.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/MakeCoffee" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/RefillResources/refill.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/RefillResources" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Start/choiceAction.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Start" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/readyMadeCoffee.html" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
       </map>
     </option>
